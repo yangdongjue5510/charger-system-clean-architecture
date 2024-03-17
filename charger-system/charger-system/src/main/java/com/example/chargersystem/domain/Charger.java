@@ -1,8 +1,13 @@
 package com.example.chargersystem.domain;
 
 import jakarta.persistence.*;
+import lombok.AccessLevel;
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 
 @Entity
+@AllArgsConstructor
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class Charger {
 
     @Id
@@ -13,7 +18,7 @@ public class Charger {
     @Enumerated(EnumType.STRING)
     private ChargerStatus status;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "charging_station_id")
     private ChargingStation station;
 }
