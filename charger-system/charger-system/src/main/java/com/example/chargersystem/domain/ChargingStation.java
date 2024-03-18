@@ -1,30 +1,21 @@
 package com.example.chargersystem.domain;
 
-import jakarta.persistence.*;
-import lombok.*;
+import lombok.Getter;
+import lombok.RequiredArgsConstructor;
 
 import java.math.BigDecimal;
 
-@Entity
 @Getter
-@Setter
-@AllArgsConstructor
-@NoArgsConstructor(access = AccessLevel.PROTECTED)
+@RequiredArgsConstructor
 public class ChargingStation {
 
-    @Id
-    @Setter(AccessLevel.NONE)
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+    private final Long id;
 
-    @Column(nullable = false)
-    private String address;
+    private final String address;
 
-    @Column(nullable = false)
-    private String name;
+    private final String name;
 
-    @Column(nullable = false)
-    private FeeRate feeRate;
+    private final FeeRate feeRate;
 
     public long calculateFeeAmount(BigDecimal chargedAmount) {
         return this.feeRate

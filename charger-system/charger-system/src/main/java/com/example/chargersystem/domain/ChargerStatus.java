@@ -5,4 +5,5 @@ public enum ChargerStatus {
     RESERVED,
     CHARGING,
     DONE;
+
 }

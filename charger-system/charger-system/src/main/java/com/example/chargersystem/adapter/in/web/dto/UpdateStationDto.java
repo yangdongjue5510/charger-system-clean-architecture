@@ -1,4 +1,4 @@
-package com.example.chargersystem.service.dto;
+package com.example.chargersystem.adapter.in.web.dto;
 
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;

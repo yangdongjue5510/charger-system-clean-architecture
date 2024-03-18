@@ -1,4 +1,4 @@
-package com.example.chargersystem.service.dto;
+package com.example.chargersystem.application.response;
 
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
